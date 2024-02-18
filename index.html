@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="icon" href="media/svg/CWLogo.svg">
-
+  <script src="./js/tema.js"></script>
 </head>
 <body>
   <header>
@@ -26,7 +26,6 @@
       <a href="billetes.html">Billetes</a>
       <a href="exonumia.html">Exonumia</a>
     </nav>
-    <button id="botonTema" onclick="cambiarTema()"><img src="media/svg/Darkmode.svg" alt="Cambiar de tema oscuro a claro y viceversa"></button>
   </header>
   <!--Contenido principal: página de inicio, explicación-->
   <main>
@@ -109,7 +108,10 @@
   <!--Footer: enlace a github-->
   <footer>
     <p>Código fuente en <a href="https://github.com/AlexSilvaFBMOLL/B2_Practica2">Github</a></p>
+    <button onclick="cambiarTema()">
+      <span>Cambiar tema</span>
+      <img src="media/svg/Darkmode.svg" alt="Cambiar de tema oscuro a claro y viceversa">
+    </button>
   </footer>
-  <script src="./js/tema.js"></script>
 </body>
 </html>

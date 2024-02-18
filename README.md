@@ -88,6 +88,8 @@ proyecto
 │   │   │   CWLetters.svg
 │   │   │   CWLettersDark.svg
 │   │   │   CWLogo.svg
+│   │   │   Darkmode.svg
+│   │   │   Lightmode.svg
 │   │   │   Menu.svg
 │   │   │   MenuDark.svg
 ```
@@ -150,8 +152,10 @@ Las fotografías que he tomado ocupaban 10MB porque tenían una resolución de 8
 ### 6 de diciembre de 2023
 + Cambios menores
 + Finalizado el proyecto de la práctica 2
+
+## Agregación JavaScript
 ### 15 de febrero de 2024
 + Implementación de JavaScript en el proyecto
 + Cambios en la compatibilidad de modo claro y oscuro
-  + Antes sólo se podía cambiar si el navegador estaba en un modo u otro. Ahora al cargar la página por primera vez se guarda en localStorage el modo preferido por el usuario y, además, se pondrá un botón en la barra de navegación para poder cambiar este modo. Al pulsarlo se guardará el nuevo valor en la variable local y cuando se recargue la página se mantendrá el modo de la última sesión.
+  + Antes sólo se podía cambiar si el navegador estaba en un modo u otro. Ahora al cargar la página por primera vez se guarda en localStorage el modo preferido por el usuario y, además, se pondrá un botón en el pie de página para poder cambiar este modo. Al pulsarlo se guardará el nuevo valor en la variable local y cuando se recargue la página se mantendrá el modo de la última sesión.
   + Para que esta función sea aplicable en todas las páginas hay que abrir la web desde un dominio, con la extensión de Live Server se puede lograr el mismo efecto. Si no se hace, el cambio de tema sólo tendrá efecto en la página en la que se haya pulsado el botón.

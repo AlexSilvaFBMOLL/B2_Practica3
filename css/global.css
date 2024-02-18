@@ -13,6 +13,15 @@
 
 /* Estilos diferentes para modo claro y modo oscuro */
 /* Mediante JavaScript se asigna a a los HTML el atributo "tema". Según las preferencias que tenga el usuario en su navegador se asignará el valor "claro" u "oscuro" a este atributo, el cuál determinará cómo se verá la página. Además, el usuario podrá cambiar este atributo pulsando un botón. */
+/* Modo claro */
+:root {/* Variables globales */
+  --body-background: #f2f2f2;
+  --nav-background: #dadada;
+  --nav-link: #262626;
+  --text-color: #099990;
+  --background-filter: #ffffff80;
+}
+/* Modo oscuro */
 :root[tema=oscuro] {/* Modo oscuro */
   --body-background: #333;/* Color de fondo del body */
   --nav-background: #262626;/* Color de fondo del navbar */
@@ -27,16 +36,8 @@
 :root[tema=oscuro] img[src="media/svg/Menu.svg"] {/* Cambiar al menú de modo oscuro */
   content: url("../media/svg/MenuDark.svg");
 }
-:root[tema=oscuro] img[src="media/svg/Darkmode.svg"] {
+:root[tema=oscuro] img[src="media/svg/Darkmode.svg"] {/* Cambiar el icono de cambiar tema */
   content: url("../media/svg/Lightmode.svg");
-}
-/* Modo claro */
-:root[tema=claro]{/* Variables globales */
-  --body-background: #f2f2f2;
-  --nav-background: #dadada;
-  --nav-link: #262626;
-  --text-color: #099990;
-  --background-filter: #ffffff80;
 }
 
 /* Estilos globales */
@@ -82,13 +83,6 @@ a[href="index.html"] {
   height: 64px;
   padding: 0px 10px;
 }
-#botonTema {
-  border: none;
-  background-color: var(--nav-background);
-  padding: 0px 10px;
-  width: 64px;
-  cursor: pointer;
-}
 
 /* El botón desplegable del menú no es un botón, sino una checkbox. Cuando está marcada muestra los enlaces de navegación en una columna, si está desmarcada los oculta */
 #menu {/* Ocultar la checkbox del menú */
@@ -106,7 +100,7 @@ a[href="index.html"] {
   cursor: pointer;
 }
 
-/* Footer con información sobre el github */
+/* Footer con información sobre el github y botón para cambiar de tema */
 footer {
   background-color: var(--nav-background);
   display: flex;
@@ -119,6 +113,22 @@ footer a {/* Enlace al github */
   font-weight: bold;
   color: var(--text-color);
   text-decoration: none;
+}
+footer button { /* Cambiar de tema - botón */
+  border: none;
+  background-color: var(--nav-background);
+  padding: 20px 0px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+footer button span { /* Texto cambiar de tema */
+  color: var(--text-color-secondary);
+  margin-right: 10px;
+  font-size: 1rem;
+}
+footer button img { /* SVG con el icono de cambiar de tema */
+  width: 40px;
 }
 
 /* Media querys de resolución de pantalla relacionados con la navbar */
