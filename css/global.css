@@ -27,6 +27,9 @@
 :root[tema=oscuro] img[src="media/svg/Menu.svg"] {/* Cambiar al menú de modo oscuro */
   content: url("../media/svg/MenuDark.svg");
 }
+:root[tema=oscuro] img[src="media/svg/Darkmode.svg"] {
+  content: url("../media/svg/Lightmode.svg");
+}
 /* Modo claro */
 :root[tema=claro]{/* Variables globales */
   --body-background: #f2f2f2;
@@ -72,13 +75,19 @@ header nav a {/* Enlaces del Navbar (todos menos el logotipo, que está fuera de
 header nav a:hover, header nav a.active {/* Cursor sobre Links del Navbar y clase active (cuando la página del enlace es la que está en pantalla) */
   background-color: #099990;/* No cambia en función del modo de visualización */
 }
+a[href="index.html"] {
+  height: 64px;
+}
 #Logo {/* SVG del logo: dimensiones y padding */
   height: 64px;
   padding: 0px 10px;
 }
 #botonTema {
+  border: none;
+  background-color: var(--nav-background);
   padding: 0px 10px;
-  width: 40px;
+  width: 64px;
+  cursor: pointer;
 }
 
 /* El botón desplegable del menú no es un botón, sino una checkbox. Cuando está marcada muestra los enlaces de navegación en una columna, si está desmarcada los oculta */
