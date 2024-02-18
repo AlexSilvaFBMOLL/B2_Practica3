@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoinWorld</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="icon" href="media/svg/CWLogo.svg">
+
+</head>
+<body>
+  <header>
+    <!--Header: barra de navegación, logo-->
+    <!--Logotipo de la web con enlace a la página principal-->
+    <a href="index.html"><img src="media/svg/CWLetters.svg" alt="Logotipo de CoinWorld" id="Logo"/></a>
+    <!--Sustituto de un botón, ya que no se ha explicado javascript lo haré puramente con CSS-->
+    <!--Al ser marcada la checkbox (pulsando la imagen del menú) se muestran los enlaces de abajo-->
+    <input type="checkbox" id="menu" name="menu"/>
+    <label for="menu"><img src="media/svg/Menu.svg" alt="Menú desplegable"/></label>
+    <!--Navbar-->
+    <nav>
+      <!--Enlaces de navegación-->
+      <a href="numismatica.html">Numismática</a>
+      <a href="monedas.html">Monedas</a>
+      <a href="billetes.html">Billetes</a>
+      <a href="exonumia.html">Exonumia</a>
+    </nav>
+    <img onclick="cambiarTema()" id="botonTema" src="media/svg/Darkmode.svg" alt="Cambiar de tema oscuro a claro y viceversa">
+  </header>
+  <!--Contenido principal: página de inicio, explicación-->
+  <main>
+    <!--Título de la web-->
+    <section id="titulo">
+      <h1>CoinWorld</h1>
+      <p>Colecciones numismáticas</p>
+    </section>
+    <!--Información de la web, dividido en dos bloques con texto-->
+    <section id="info">
+      <div>
+        <h1>Piezas numismáticas</h1>
+        <p>Contenido exclusivo de mi propia colección</p>
+        <p>Aprende sobre monedas y billetes del mundo</p>
+        <p>Variaciones, cecas, acuñaciones y más</p>
+      </div>
+      <div>
+        <h1>Gestionar una colección</h1>
+        <p>En un futuro se prevé añadir una base de datos de monedas y billetes de todo el mundo, en la que el usuario podrá añadir qué elementos tiene en su colección</p>
+      </div>
+    </section>
+    <!--Sección de monedas con enlaces-->
+    <article>
+      <h1>Monedas</h1>
+      <a href="monedas.html#coleccion">
+        <img src="media/img/monedas/ES_UC350.png" alt="Imagen de una moneda de plata de colección: 30 Euros conmemorando el santo año Xacobeo.">
+        <span>Monedas de colección</span>
+      </a>
+      <a href="monedas.html#conmemorativa">
+        <img src="media/img/monedas/AT_KM3275.png" alt="Imagen de una moneda conmemorativa: 2 Euros conmemorando el centenario de la república austriaca.">
+        <span>Monedas conmemorativas</span>
+      </a>
+      <a href="monedas.html#circulante">
+        <img src="media/img/monedas/AT_KM3141.png" alt="Imagen de una moneda circulante: 50 céntimos de euro de Austria.">
+        <span>Monedas circulantes</span>
+      </a>
+    </article>
+    <!--Sección  de billetes con enlaces-->
+    <article>
+      <h1>Billetes</h1>
+      <a href="billetes.html#euro">
+        <img src="media/img/billetes/EUR_10.jpg" alt="Imagen de un billete de 10 euros del 2002.">
+        <span>Billetes de euro</span>
+      </a>
+      <a href="billetes.html#antiguo">
+        <img src="media/img/billetes/ES_P147.jpg" alt="Imagen de un billete antiguo: 25 pesetas del 1954.">
+        <span>Billetes antiguos</span>
+      </a>
+      <a href="billetes.html#extranjero">
+        <img src="media/img/billetes/US_5.jpg" alt="Imagen de un billete extranjero: 2 dólares estadounidenses con una representación de la firma de la declaración de independencia.">
+        <span>Billetes extranjeros</span>
+      </a>
+    </article>
+    <!--Sección de exonumia con enlaces-->
+    <article>
+      <h1>Exonumia</h1>
+      <a href="exonumia.html#medalla">
+        <img src="media/img/exonumia/medalla.png" alt="Imagen de una medalla española: boda de Jaime de Marichalar y Elena de Borbón.">
+        <span>Medallas</span>
+      </a>
+      <a href="exonumia.html#recuerdo">
+        <img src="media/img/exonumia/recuerdo.png" alt="Imagen de un recuerdo coleccionable: una moneda elongada del Faro de Faváritx, en Menorca.">
+        <span>Recuerdos</span>
+      </a>
+      <a href="exonumia.html#replica">
+        <img src="media/img/exonumia/replica.png" alt="Imagen de una moneda francesa, réplica de una moneda del 1731 procedente de las Isles du Vent.">
+        <span>Réplicas</span>
+      </a>
+    </article>
+  </main>
+  <!--Páginas y programas que he utilizado alguna vez para guardar mi colección-->
+  <aside>
+    <h1>Posibles enlaces de interés</h1>
+    <section>
+      <a href="https://es.numista.com/"><img src="media/img/otras/numista.png" alt="Logo de numista">Numista</a>
+      <a href="https://es.ucoin.net/"><img src="media/img/otras/ucoin.png" alt="Logo de ucoin">Ucoin</a>
+      <a href="http://opennumismat.github.io/"><img src="media/img/otras/opennumismat.png" alt="Logo de opennumismat">OpenNumismat</a>
+    </section>
+  </aside>
+  <!--Footer: enlace a github-->
+  <footer>
+    <p>Código fuente en <a href="https://github.com/AlexSilvaFBMOLL/B2_Practica2">Github</a></p>
+  </footer>
+  <script src="./js/tema.js"></script>
+</body>
+</html>

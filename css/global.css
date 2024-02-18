@@ -1,0 +1,134 @@
+/* En este archivo se encuentran estilos aplicados globalmente a todas las páginas del proyecto, así como variables globales, media querys aplicadas a todo el proyecto y los estilos referentes a la barra de navegación y al footer de las páginas */
+
+/* Fuentes personalizadas */
+/* Archivos ttf con fuentes Gill Sans, ya que muchos dispositivos no tienen esta fuente */
+@font-face {
+  font-family: 'Gill Sans';
+  src: url(../media/font/Gill-Sans.ttf);
+}
+@font-face {
+  font-family: 'Gill Sans Bold';
+  src: url(../media/font/Gill-Sans-Bold.ttf);
+}
+
+/* Estilos diferentes para modo claro y modo oscuro */
+/* Mediante JavaScript se asigna a a los HTML el atributo "tema". Según las preferencias que tenga el usuario en su navegador se asignará el valor "claro" u "oscuro" a este atributo, el cuál determinará cómo se verá la página. Además, el usuario podrá cambiar este atributo pulsando un botón. */
+:root[tema=oscuro] {/* Modo oscuro */
+  --body-background: #333;/* Color de fondo del body */
+  --nav-background: #262626;/* Color de fondo del navbar */
+  --nav-link: white;/* Texto de los enlaces del navbar */
+  --text-color: #f2f2f2;/* Texto principal de las páginas */
+  --text-color-secondary: #ccc;/* Color de texto secundario */
+  --background-filter: #33333380;/* Filtro de color para imágenes */
+}
+:root[tema=oscuro] #Logo {/* Cambiar al logo de modo oscuro */
+  content: url("../media/svg/CWLettersDark.svg");
+}
+:root[tema=oscuro] img[src="media/svg/Menu.svg"] {/* Cambiar al menú de modo oscuro */
+  content: url("../media/svg/MenuDark.svg");
+}
+/* Modo claro */
+:root[tema=claro]{/* Variables globales */
+  --body-background: #f2f2f2;
+  --nav-background: #dadada;
+  --nav-link: #262626;
+  --text-color: #099990;
+  --background-filter: #ffffff80;
+}
+
+/* Estilos globales */
+* {/* Fuente, padding y margen por defecto */
+  font-family: 'Gill Sans';
+  padding: 0;
+  margin: 0;
+}
+body {/* Color de fondo del cuerpo de la página */
+  background-color: var(--body-background);
+}
+
+/* Header común en todas las páginas */
+header {
+  min-height: 64px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Sólo en móviles: Para poner el logo a la izquierda y el menú a la derecha */
+  flex-wrap: wrap; /* Sólo en móviles: Para que el nav con los enlaces se pasen a la siguiente línea */
+  background-color: var(--nav-background);
+}
+header nav {/* Navbar */
+  flex-basis: 100%; /* Sólo en móviles: Para que el nav pase a la siguiente línea */
+  display: flex;
+  flex-direction: column; /* Sólo en móviles */
+}
+header nav a {/* Enlaces del Navbar (todos menos el logotipo, que está fuera del elemento nav) */
+  flex-basis: 100%; /* Para que ocupen una línea entera en móviles */
+  display: none; /* Sólo en móviles: Se ocultan hasta que se pulse el menú */
+  padding: 10px 10px;
+  align-items: center;
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--nav-link);
+}
+header nav a:hover, header nav a.active {/* Cursor sobre Links del Navbar y clase active (cuando la página del enlace es la que está en pantalla) */
+  background-color: #099990;/* No cambia en función del modo de visualización */
+}
+#Logo {/* SVG del logo: dimensiones y padding */
+  height: 64px;
+  padding: 0px 10px;
+}
+#botonTema {
+  padding: 0px 10px;
+  width: 40px;
+}
+
+/* El botón desplegable del menú no es un botón, sino una checkbox. Cuando está marcada muestra los enlaces de navegación en una columna, si está desmarcada los oculta */
+#menu {/* Ocultar la checkbox del menú */
+  display: none;
+}
+#menu + label {/* Alinear el contenedor de la imagen del menú */
+  align-self: center;
+}
+#menu:checked ~ nav a {/* Mostrar los enlaces del navbar al pulsar el menú */
+  display: flex;
+}
+#menu + label > img {/* SVG del menú, la imagen en sí */
+  height: 40px;
+  padding: 0px 10px;
+  cursor: pointer;
+}
+
+/* Footer con información sobre el github */
+footer {
+  background-color: var(--nav-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text-color-secondary);
+  padding: 100px 0px;
+}
+footer a {/* Enlace al github */
+  font-weight: bold;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+/* Media querys de resolución de pantalla relacionados con la navbar */
+/* En un ordenador se elimina el icono desplegable y se colocan los elementos del menú en una sola fila */
+@media (min-width: 1024px) {/* Resolución a partir de netbook (ordenador pequeño) */
+  header {
+    flex-wrap: nowrap;
+  }
+  header nav {/* Barra de navegación */
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: row;
+  }
+  header nav a {/* Links del Navbar */
+    flex-basis: content;
+    display: flex;
+    padding: 10px 25px;
+  }
+  #menu + label > img {/* SVG del menú desplegable */
+    display: none;
+  }
+}

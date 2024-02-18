@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoinWorld</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/monedas.css">
+  <link rel="icon" href="media/svg/CWLogo.svg">
+  <script src="./js/tema.js"></script>
+</head>
+<body>
+  <header>
+    <!--Header común en todas las pestañas-->
+    <a href="index.html"><img src="media/svg/CWLetters.svg" alt="Logotipo de CoinWorld" id="Logo"/></a>
+    <input type="checkbox" id="menu"/>
+    <label for="menu"><img src="media/svg/Menu.svg" alt="Menú desplegable"/></label>
+    <nav>
+      <a href="numismatica.html">Numismática</a>
+      <a href="monedas.html">Monedas</a>
+      <a href="billetes.html" class="active">Billetes</a>
+      <a href="exonumia.html">Exonumia</a>
+    </nav>
+  </header>
+  <input type="button" value="Clock" class="mode-toggle" onclick="cambiarTema()">
+  <!--Main: contenido principal de la página-->
+  <main>
+    <!--Billetes de euro-->
+    <article id="euro">
+      <h1>Europa</h1>
+      <h3>10 euros 2002</h3>
+      <section>
+        <img src="media/img/billetes/EUR_10.jpg" alt="Imagen de la cara común de un billete de 10 euros de la primera serie, en el año 2002">
+        <img src="media/img/billetes/EUR_10-R.jpg" alt="Imagen del reverso del billete de 10 euros de primera serie">
+      </section>
+      <p>El dinero en efectivo se va usando cada vez menos, pero los billetes siguen teniendo un valor monetario igual o incluso mayor que el de las monedas. Cuando se va a sacar dinero al cajero automático nos dan billetes nuevos, planchados, recién salidos de la sucursal provincial del Banco de España.</p>
+      <p>Este billete en concreto se trata de uno de la primera serie del euro, en el año 2002. Cada país de la comunidad del euro imprimió los suyos. Se puede distinguir en qué país fue imprimido gracias al primer carácter del número de serie.</p>
+    </article>
+    <!--Billetes antiguos-->
+    <article id="antiguo">
+      <h1>España</h1>
+      <h3>25 pesetas 1954</h3>
+      <section>
+        <img src="media/img/billetes/ES_P147.jpg" alt="Imagen del anverso de un billete de 25 pesetas del año 1954 con el rostro de Isaac Albéniz">
+        <img src="media/img/billetes/ES_P147-R.jpg" alt="Imagen del reverso del billete de 25 pesetas de 1954, con una imagen del Patio de los Leones de la Alhambra, Granada">
+      </section>
+      <p>Pese a que todos los ejemplares que tengo están en mal estado, este es uno de mis billetes favoritos. No solo es morado, color que me encanta, sino que además en el reverso aparece una parte de la Alhambra en Granada, ciudad de procedencia de parte de mi familia.</p>
+      <p>Los billetes tan antiguos como este, de más de 70 años, son difíciles de encontrar en buenas condiciones. Pero en internet se pueden encontrar imágenes de billetes en muy buen estado.</p>
+    </article>
+    <!--Billetes extranjeros-->
+    <article id="extranjero">
+      <h1>Estados Unidos</h1>
+      <h3>2 dólares</h3>
+      <section>
+        <img src="media/img/billetes/US_5.jpg" alt="Imagen del anverso de un billete de 5 dólares estadounidenses, con el rostro de Abraham Lincoln">
+        <img src="media/img/billetes/US_5-R.jpg" alt="Imagen del reverso del billete de 5 dólares, con una representación del Lincoln Memorial">
+      </section>
+      <p>Los billetes extranjeros pueden ser un gran recuerdo de un viaje, quizá un regalo de alguien que vivió en ese país. Este billete es estadounidense. La historia de cómo llegó a mis manos la he olvidado, pues son muchas piezas las que hay en mi colección, pero ha viajado a través del océano hasta llegar a esta pequeña isla del mediterráneo.</p>
+    </article>
+  </main>
+  <!--Footer común en todas las pestañas-->
+  <footer>
+    <p>Código fuente en <a href="https://github.com/AlexSilvaFBMOLL/B2_Practica2">Github</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,133 @@
+/* Estilos CSS aplicados únicamente a index.html */
+
+/* Main: contenido principal de la página de inicio */
+main h1 {/* Colores de encabezados */
+  color: var(--text-color);
+}
+main p, main img {/* Colores de texto (img para los alt) */
+  color: var(--text-color-secondary);
+}
+#titulo {/* Sección con el título de la web y una breve descripción */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+}
+#titulo h1 {
+  font-size: 33px;
+  font-family: 'Gill Sans Bold';
+}
+
+/* Sección de información */
+#info {/* Sección con imagen de fondo e información de la web */
+  content: "";
+  background-image: url(../media/img/fondo/album.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 250px;
+}
+#info div {/* Divisores de los bloques de información */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  padding: 20px;
+  flex-basis: 50%;
+  background-color: var(--background-filter);
+}
+#info div p {/* Limitar el tamaño de los párrafos de la sección de información */
+  max-width: 300px;
+}
+
+/* Secciones "article" con imágenes de elementos numismáticos */
+article {/* Article con las imágenes */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 20px 20px 20px;
+  text-align: center;/* Para los span y el texto alternativo de las imágenes */
+}
+article h1 {/* Encabezados de las secciones article */
+  flex-basis: 100%;/* Para que ocupen una línea entera */
+}
+article a {/* Enlaces de article */
+  color: var(--text-color-secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;/* Para que ocupen la línea entera, se cambiará en pantallas de ordenadores */
+}
+article img {/* Imágenes de article */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0px;
+  max-width: 300px;
+  max-height: 300px;
+}
+article span {/* Al poner el ratón sobre la imagen o al pulsarla sale este texto */
+  position: absolute;
+  font-size: 25px;
+  display: none;
+  color: var(--text-color-secondary);
+}
+article a img:hover {/* Acción de hover sobre la imagen */
+  color: var(--body-background);
+  filter: opacity(50%);
+}
+article a img:hover ~ span {/* El display del texto al hacer hover */
+  display: block;
+  
+}
+
+/* Enlaces a páginas y programas del mundo de la numismática */
+aside {/* Contenedor de otras páginas */
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+aside h1 {/* Título de páginas de interés */
+  color: var(--text-color);
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+aside section {/* Elemento donde se encuentran los enlaces */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+aside a {/* Los enlaces de interés */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px;
+  color: var(--text-color-secondary);
+  text-decoration: none;
+}
+aside a:hover {/* Los enlaces de interés al pasar el ratón por encima */
+  color: var(--text-color);
+}
+aside a img {/* Iconos de los enlaces */
+  margin-right: 10px;
+}
+
+/* Media querys de resolución */
+@media (min-width: 795px) {/* Resolución aproximada a partir de tablet. Es un valor ajustado manualmente para que la visualización de los elementos no se distorsione */
+  #info {/* Pone en dos columnas el texto del apartado de info */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+@media (min-width: 1024px) {/* Resolución a partir de netbook (ordenador pequeño) */
+  article a {
+    flex-basis: 33.33%;/* Pone las imágenes en filas de 3 elementos en vez de una debajo de la otra */
+  }
+}
