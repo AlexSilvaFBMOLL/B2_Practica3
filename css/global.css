@@ -77,6 +77,7 @@ header nav a:hover, header nav a.active {/* Cursor sobre Links del Navbar y clas
   background-color: #099990;/* No cambia en función del modo de visualización */
 }
 a[href="index.html"] {
+  width: 90px;
   height: 64px;
 }
 #Logo {/* SVG del logo: dimensiones y padding */
