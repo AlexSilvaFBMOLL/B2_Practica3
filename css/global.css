@@ -135,6 +135,9 @@ footer button img { /* SVG con el icono de cambiar de tema */
 /* Media querys de resolución de pantalla relacionados con la navbar */
 /* En un ordenador se elimina el icono desplegable y se colocan los elementos del menú en una sola fila */
 @media (min-width: 1024px) {/* Resolución a partir de netbook (ordenador pequeño) */
+  a[href="index.html"] {
+    position: absolute;
+  }
   header {
     flex-wrap: nowrap;
   }

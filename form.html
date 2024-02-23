@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoinWorld</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="icon" href="media/svg/CWLogo.svg">
+  <script src="./js/tema.js"></script>
+</head>
+<body>
+  <header>
+    <!--Header común en todas las pestañas-->
+    <a href="index.html"><img src="media/svg/CWLetters.svg" alt="Logotipo de CoinWorld" id="Logo"/></a>
+    <input type="checkbox" id="menu"/>
+    <label for="menu"><img src="media/svg/Menu.svg" alt="Menú desplegable"/></label>
+    <nav>
+      <a href="numismatica.html">Numismática</a>
+      <a href="monedas.html">Monedas</a>
+      <a href="billetes.html">Billetes</a>
+      <a href="exonumia.html">Exonumia</a>
+      <a href="form.html" class="active">Contacto</a>
+    </nav>
+  </header>
+  <!--Contenido principal: formulario de contacto-->
+  <main>
+    <h1>Formulario de contacto</h1>
+    <form id="contacto" action="#" onsubmit="return false">
+      <label for="nombre">Nombre</label>
+      <input type="text" name="nombre" id="nombre" minlength="2" maxlength="35">
+      <small id="nombreError"></small>
+      <label for="email">Correo electrónico</label>
+      <input type="email" name="email" id="email">
+      <small id="emailError"></small>
+      <label for="mensaje">Mensaje</label>
+      <textarea name="mensaje" id="mensaje" minlength="5"></textarea>
+      <small id="mensajeError"></small>
+      <input type="submit" value="Enviar" onclick="validar()">
+    </form>
+  </main>
+  <!--Footer: enlace a github-->
+  <footer>
+    <p>Código fuente en <a href="https://github.com/AlexSilvaFBMOLL/B2_Practica2">Github</a></p>
+    <button onclick="cambiarTema()">
+      <span>Cambiar tema</span>
+      <img src="media/svg/Darkmode.svg" alt="Cambiar de tema oscuro a claro y viceversa">
+    </button>
+  </footer>
+  <script src="./js/form.js"></script>
+</body>
+</html>
