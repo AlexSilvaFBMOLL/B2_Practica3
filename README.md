@@ -175,3 +175,10 @@ Las fotografías que he tomado ocupaban 10MB porque tenían una resolución de 8
   + Cada elemento numismático de la web tiene una valoración que va del 0 al 10. Esta valoración inicialmente está en 0 y el usuario puede valorar como guste. Este valor puede ser cambiado en cualquier momento y además se mantiene cuando se actualiza la página o se cierra el navegador
   + Los iconos de las estrellas han sido creados por mí en SVGator
   + Hay iconos de estrellas vacías y medio vacías para modo claro y para modo oscuro
+
+## Galería
+### Página de inicio
+Light mode                                      |  Dark mode
+:----------------------------------------------:|:---------------------------------------------------:
+![alt text](media/img/readme/mainpage.png)      | ![alt text](media/img/readme/mainpagedark.png)
+![alt text](media/img/readme/mainpagephone.png) | ![alt text](media/img/readme/mainpagephonedark.png)
