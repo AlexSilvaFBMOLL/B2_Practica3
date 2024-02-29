@@ -39,6 +39,12 @@
 :root[tema=oscuro] img[src="media/svg/Darkmode.svg"] {/* Cambiar el icono de cambiar tema */
   content: url("../media/svg/Lightmode.svg");
 }
+:root[tema=oscuro] img[src="media/svg/NoStar.svg"] {
+  content: url("../media/svg/NoStarLight.svg");
+}
+:root[tema=oscuro] img[src="media/svg/HalfStar.svg"] {
+  content: url("../media/svg/HalfStarLight.svg");
+}
 
 /* Estilos globales */
 * {/* Fuente, padding y margen por defecto */

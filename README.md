@@ -167,3 +167,7 @@ Las fotografías que he tomado ocupaban 10MB porque tenían una resolución de 8
   + El formulario introducido mediante HTML ahora cuenta con validación JavaScript.
   + Estilos CSS
   + Mensajes de validación que informan al usuario de qué errores pueden tener los campos.
+  + Notificación emergente
+    + Al enviar el formulario de contacto se pide confirmación por parte del usuario a través de una notificación emergente.
+  + Carga dinámica de contenido
+    + Hay elementos del formulario que se muestran o ocultan mediante JavaScript

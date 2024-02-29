@@ -27,9 +27,22 @@
   <main>
     <!--Medallas-->
     <article id="medalla">
-      <h1>Sevilla, 1995</h1>
+      <section class="titulos-estrellas">
+        <h1>Sevilla, 1995</h1>
+        <div class="stars" onmouseover="showValorar(this)" onmouseout="hideValorar(this)">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <div class="valorar">
+            <input type="text" inputmode="numeric" onkeydown="return /[0-9]|Arrow|Backspace|Delete/.test(event.key)">
+            <button onclick="valorar(this)">Valorar</button>
+          </div>
+        </div>
+      </section>
       <h3>Boda de Jaime de Marichalar y Elena de Borbón</h3>
-      <section>
+      <section class="imagenes">
         <img src="media/img/exonumia/medalla.png" alt="Imagen de una medalla con motivo de la boda de Jaime de Marichalar y Elena de Borbón en Sevilla, España, 1995">
         <img src="media/img/exonumia/medalla-R.png" alt="Imagen del reverso de la medalla de la boda de Jaime y Elena">
       </section>
@@ -38,9 +51,22 @@
     </article>
     <!--Monedas elongadas-->
     <article id="recuerdo">
-      <h1>Menorca</h1>
+      <section class="titulos-estrellas">
+        <h1>Menorca</h1>
+        <div class="stars" onmouseover="showValorar(this)" onmouseout="hideValorar(this)">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <div class="valorar">
+            <input type="text" inputmode="numeric" onkeydown="return /[0-9]|Arrow|Backspace|Delete/.test(event.key)">
+            <button onclick="valorar(this)">Valorar</button>
+          </div>
+        </div>
+      </section>
       <h3>"Far de Favàritx"</h3>
-      <section>
+      <section class="imagenes">
         <img src="media/img/exonumia/recuerdo.png" alt="Imagen de una moneda de 5 céntimos elongada, con motivo del Faro de Faváritx, en Menorca">
         <img src="media/img/exonumia/recuerdo-R.png" alt="Imagen del reverso liso de una moneda elongada">
       </section>
@@ -48,9 +74,22 @@
     </article>
     <!--Réplicas de monedas-->
     <article id="replica">
-      <h1>Isles du Vent</h1>
+      <section class="titulos-estrellas">
+        <h1>Isles du Vent</h1>
+        <div class="stars" onmouseover="showValorar(this)" onmouseout="hideValorar(this)">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <div class="valorar">
+            <input type="text" inputmode="numeric" onkeydown="return /[0-9]|Arrow|Backspace|Delete/.test(event.key)">
+            <button onclick="valorar(this)">Valorar</button>
+          </div>
+        </div>
+      </section>
       <h3>Réplica de 12 soles, 1731</h3>
-      <section>
+      <section class="imagenes">
         <img src="media/img/exonumia/replica.png" alt="Imagen de una réplica de una moneda de 12 soles de les Petites Antilles de Francia del 1731">
         <img src="media/img/exonumia/replica-R.png" alt="Imagen del reverso de la réplica de 12 soles">
       </section>
@@ -60,9 +99,22 @@
     </article>
     <!--Tokens / Fichas-->
     <article id="token">
-      <h1>España</h1>
+      <section class="titulos-estrellas">
+        <h1>España</h1>
+        <div class="stars" onmouseover="showValorar(this)" onmouseout="hideValorar(this)">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <div class="valorar">
+            <input type="text" inputmode="numeric" onkeydown="return /[0-9]|Arrow|Backspace|Delete/.test(event.key)">
+            <button onclick="valorar(this)">Valorar</button>
+          </div>
+        </div>
+      </section>
       <h3>Ficha de feria de la empresa Montecarlo</h3>
-      <section>
+      <section class="imagenes">
         <img src="media/img/exonumia/token.png" alt="Imagen de un token o ficha de las ferias españolas, concretamente de la empresa Montecarlo.">
         <img src="media/img/exonumia/token-R.png" alt="Imagen del reverso del token de feria">
       </section>
@@ -77,5 +129,7 @@
       <img src="media/svg/Darkmode.svg" alt="Cambiar de tema oscuro a claro y viceversa">
     </button>
   </footer>
+  <!--Script de las monedas-->
+  <script src="js/monedas.js"></script>
 </body>
 </html>

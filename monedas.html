@@ -27,9 +27,22 @@
   <main>
     <!--Monedas en circulación-->
     <article id="circulante">
-      <h1>Austria</h1>
+      <section class="titulos-estrellas">
+        <h1>Austria</h1>  
+        <div class="stars" onmouseover="showValorar(this)" onmouseout="hideValorar(this)">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <div class="valorar">
+            <input type="text" inputmode="numeric" onkeydown="return /[0-9]|Arrow|Backspace|Delete/.test(event.key)">
+            <button onclick="valorar(this)">Valorar</button>
+          </div>
+        </div>
+      </section>
       <h3>50 céntimos 2009</h3>
-      <section>
+      <section class="imagenes">
         <img src="media/img/monedas/EUR_0,50.png" alt="Imagen de la cara común de una moneda de cincuenta céntimos">
         <img src="media/img/monedas/AT_KM3141.png" alt="Imagen del anverso de una moneda de cincuenta céntimos originaria de Austria, concretamente del año 2009">
       </section>
@@ -39,10 +52,23 @@
     </article>
     <!--Monedas conmemorativas-->
     <article id="conmemorativa">
-      <h1>Austria</h1>
+      <section class="titulos-estrellas">
+        <h1>Austria</h1>  
+        <div class="stars" onmouseover="showValorar(this)" onmouseout="hideValorar(this)">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <div class="valorar">
+            <input type="text" inputmode="numeric" onkeydown="return /[0-9]|Arrow|Backspace|Delete/.test(event.key)">
+            <button onclick="valorar(this)">Valorar</button>
+          </div>
+        </div>
+      </section>
       <h3>2 euros 2018</h3>
-      <h3>"Centenario de la república austriaca"</h3>
-      <section>
+      <h3>"Centenario de la república austriaca"</h3>      
+      <section class="imagenes">
         <img src="media/img/monedas/EUR_2.png" alt="Imagen de la cara común de una moneda de dos euros">
         <img src="media/img/monedas/AT_KM3275.png" alt="Imagen del anverso de una moneda conmemorativa de dos euros originaria de Austria, conmemorando el centenario de la república austriaca">
       </section>
@@ -51,10 +77,23 @@
     </article>
     <!--Monedas de colección-->
     <article id="coleccion">
-      <h1>España</h1>
+      <section class="titulos-estrellas">
+        <h1>España</h1>
+        <div class="stars" onmouseover="showValorar(this)" onmouseout="hideValorar(this)">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <div class="valorar">
+            <input type="text" inputmode="numeric" onkeydown="return /[0-9]|Arrow|Backspace|Delete/.test(event.key)">
+            <button onclick="valorar(this)">Valorar</button>
+          </div>
+        </div>
+      </section>
       <h3>30 euros 2021</h3>
-      <h3>"Año Santo Jacobeo 2021-2022"</h3>
-      <section>
+      <h3>"Año Santo Jacobeo 2021-2022"</h3> 
+      <section class="imagenes">
         <img src="media/img/monedas/ES_UC350.png" alt="Imagen del anverso de una moneda de colección española de 30 euros, conmemorando el año santo Jacobeo 2021-2022">
         <img src="media/img/monedas/ES_UC350-R.png" alt="Imagen del reverso de la moneda de colección del año santo Jacobeo 2021-2022">
       </section>
@@ -70,5 +109,7 @@
       <img src="media/svg/Darkmode.svg" alt="Cambiar de tema oscuro a claro y viceversa">
     </button>
   </footer>
+  <!--Script de las monedas-->
+  <script src="js/monedas.js"></script>
 </body>
 </html>

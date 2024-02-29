@@ -27,9 +27,22 @@
   <main>
     <!--Billetes de euro-->
     <article id="euro">
-      <h1>Europa</h1>
+      <section class="titulos-estrellas">
+        <h1>Europa</h1>
+        <div class="stars" onmouseover="showValorar(this)" onmouseout="hideValorar(this)">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <div class="valorar">
+            <input type="text" inputmode="numeric" onkeydown="return /[0-9]|Arrow|Backspace|Delete/.test(event.key)">
+            <button onclick="valorar(this)">Valorar</button>
+          </div>
+        </div>
+      </section>
       <h3>10 euros 2002</h3>
-      <section>
+      <section class="imagenes">
         <img src="media/img/billetes/EUR_10.jpg" alt="Imagen de la cara común de un billete de 10 euros de la primera serie, en el año 2002">
         <img src="media/img/billetes/EUR_10-R.jpg" alt="Imagen del reverso del billete de 10 euros de primera serie">
       </section>
@@ -38,9 +51,22 @@
     </article>
     <!--Billetes antiguos-->
     <article id="antiguo">
-      <h1>España</h1>
+      <section class="titulos-estrellas">
+        <h1>España</h1>
+        <div class="stars" onmouseover="showValorar(this)" onmouseout="hideValorar(this)">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <div class="valorar">
+            <input type="text" inputmode="numeric" onkeydown="return /[0-9]|Arrow|Backspace|Delete/.test(event.key)">
+            <button onclick="valorar(this)">Valorar</button>
+          </div>
+        </div>
+      </section>
       <h3>25 pesetas 1954</h3>
-      <section>
+      <section class="imagenes">
         <img src="media/img/billetes/ES_P147.jpg" alt="Imagen del anverso de un billete de 25 pesetas del año 1954 con el rostro de Isaac Albéniz">
         <img src="media/img/billetes/ES_P147-R.jpg" alt="Imagen del reverso del billete de 25 pesetas de 1954, con una imagen del Patio de los Leones de la Alhambra, Granada">
       </section>
@@ -49,9 +75,22 @@
     </article>
     <!--Billetes extranjeros-->
     <article id="extranjero">
-      <h1>Estados Unidos</h1>
+      <section class="titulos-estrellas">
+        <h1>Estados Unidos</h1>
+        <div class="stars" onmouseover="showValorar(this)" onmouseout="hideValorar(this)">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <img src="media/svg/NoStar.svg" alt="★">
+          <div class="valorar">
+            <input type="text" inputmode="numeric" onkeydown="return /[0-9]|Arrow|Backspace|Delete/.test(event.key)">
+            <button onclick="valorar(this)">Valorar</button>
+          </div>
+        </div>
+      </section>
       <h3>2 dólares</h3>
-      <section>
+      <section class="imagenes">
         <img src="media/img/billetes/US_5.jpg" alt="Imagen del anverso de un billete de 5 dólares estadounidenses, con el rostro de Abraham Lincoln">
         <img src="media/img/billetes/US_5-R.jpg" alt="Imagen del reverso del billete de 5 dólares, con una representación del Lincoln Memorial">
       </section>
@@ -66,5 +105,7 @@
       <img src="media/svg/Darkmode.svg" alt="Cambiar de tema oscuro a claro y viceversa">
     </button>
   </footer>
+  <!--Script de las monedas-->
+  <script src="js/monedas.js"></script>
 </body>
 </html>

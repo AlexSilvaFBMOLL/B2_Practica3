@@ -5,6 +5,13 @@ h1, h2, h3 {/* Colores de encabezados */
 p, img, label {/* Colores de texto (img para los alt) */
   color: var(--text-color-secondary);
 }
+/* Para solventar problemas al poner títulos dentro de sections */
+h1 {
+  font-size: x-large;
+}
+h3 {
+  font-size: large;
+}
 /* Sección principal */
 main {/* Contenedor de los artículos */
   display: flex;
@@ -22,11 +29,47 @@ article {/* Artículos con texto e imágenes */
 article > * { /* Todos los elementos dentro de los artículos */
   margin: 0px 20px;
 }
-article section { /* Elemento contenedor de las imágenes */
+article section.imagenes { /* Elemento contenedor de las imágenes */
   display: flex;
   gap: 10px;
   margin: 20px;
   justify-content: center;
+}
+article section.titulos-estrellas {
+  display: flex;
+  align-items: center;
+  justify-content:space-between
+}
+article section.titulos-estrellas div.stars {
+  position: relative;
+  display: flex;
+  padding: 1px;
+}
+article section.titulos-estrellas div.stars img {
+  max-width: 1.5rem;
+  max-height: 1.5rem;
+  cursor: pointer;
+}
+.valorar {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 25px;
+  text-align: center;
+}
+.valorar input {
+  border: 1px solid var(--text-color);
+  background-color: var(--nav-background);
+  color: var(--text-color);
+  width: 100%;
+}
+.valorar button {
+  border: none;
+  padding: 3px;
+  border-radius: 10%;
+  background-color: var(--text-color);
+  color: var(--body-background);
+  cursor: pointer;
 }
 article img { /* Imágenes */
   display: flex;
