@@ -177,15 +177,20 @@ Las fotografías que he tomado ocupaban 10MB porque tenían una resolución de 8
   + Hay iconos de estrellas vacías y medio vacías para modo claro y para modo oscuro
 
 ## Galería
-Modo claro                                      |  Modo oscuro
-:----------------------------------------------:|:---------------------------------------------------:
-![alt text](media/img/readme/mainpage.png)      | ![alt text](media/img/readme/mainpagedark.png)
-![alt text](media/img/readme/mainpagephone.png) | ![alt text](media/img/readme/mainpagephonedark.png)
-
 <table>
   <tr>
-    <th colspan=2 align="center">Valoraciones</th>
+    <th align="center">Modo claro
+    <th align="center">Modo oscuro
   <tr>
-    <td><img src="media/img/readme/valorations.png"></td>
-    <td><img src="media/img/readme/valorationsdark.png"></td>
-</table>
+    <th colspan=2 align="center">Web responsiva
+  <tr>
+    <td><img src="media/img/readme/mainpage.png">
+    <td><img src="media/img/readme/mainpagedark.png">
+  <tr>
+    <td><img src="media/img/readme/mainpagephone.png">
+    <td><img src="media/img/readme/mainpagephonedark.png">
+  <tr>
+    <th colspan=2 align="center">Valoraciones
+  <tr>
+    <td><img src="media/img/readme/valorations.png">
+    <td><img src="media/img/readme/valorationsdark.png">
