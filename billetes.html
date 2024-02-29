@@ -36,7 +36,7 @@
             <!--Input: tipo texto, en móvil se pone el teclado numérico, acepta únicamente números y teclas de eliminar o de movimiento-->
             <input type="text" inputmode="numeric" onkeydown="return /[0-9]|Arrow|Backspace|Delete/.test(event.key)">
             <!--Botón: al hacer click se ejecuta la función valorar-->
-            <button onclick="valorar(this)">Valorar</button>
+            <button onclick="confirmarValoracion(this)">Valorar</button>
           </div>
         </div>
       </section>
@@ -55,7 +55,7 @@
         <div class="stars" onmouseover="showValorar(this)" onmouseout="hideValorar(this)">
           <div class="valorar">
             <input type="text" inputmode="numeric" onkeydown="return /[0-9]|Arrow|Backspace|Delete/.test(event.key)">
-            <button onclick="valorar(this)">Valorar</button>
+            <button onclick="confirmarValoracion(this)">Valorar</button>
           </div>
         </div>
       </section>
@@ -74,7 +74,7 @@
         <div class="stars" onmouseover="showValorar(this)" onmouseout="hideValorar(this)">
           <div class="valorar">
             <input type="text" inputmode="numeric" onkeydown="return /[0-9]|Arrow|Backspace|Delete/.test(event.key)">
-            <button onclick="valorar(this)">Valorar</button>
+            <button onclick="confirmarValoracion(this)">Valorar</button>
           </div>
         </div>
       </section>
