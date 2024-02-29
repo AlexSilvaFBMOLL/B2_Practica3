@@ -26,20 +26,28 @@
   <!--Contenido principal: formulario de contacto-->
   <main>
     <h1>Formulario de contacto</h1>
-    <form id="contacto" action="#" onsubmit="return false">
+    <p>¿Tienes alguna duda? ¿Quieres aportar alguna sugerencia? ¿Te gustaría reportar algún error? Cualquier cosa que quieras comentarnos puedes hacerlo rellenando este formulario de contacto. Estaremos encantados de recibir feedback</p>
+    <!--No se hace un submit, el botón solo validará los campos con JS y resolverá manualmente el envío ficticio-->
+    <!--Al no haber submit no se puede poner mínimo de caracteres, ni required, pero sí máximo de caracteres-->
+    <form action="#" id="contacto">
+      <!--Nombre: máximo 35 caracteres + validación JS -->
       <label for="nombre">Nombre</label>
-      <input type="text" name="nombre" id="nombre" minlength="2" maxlength="35">
+      <input type="text" name="nombre" id="nombre" maxlength="35">
       <small id="nombreError"></small>
+      <!--Email: input tipo email + validación JS-->
       <label for="email">Correo electrónico</label>
       <input type="email" name="email" id="email">
       <small id="emailError"></small>
+      <!--Mensaje: textarea máximo 500 caracteres + validación JS-->
       <label for="mensaje">Mensaje</label>
-      <textarea name="mensaje" id="mensaje" minlength="5"></textarea>
+      <textarea name="mensaje" id="mensaje" maxlength="500" oninput="resize()"></textarea>
       <small id="mensajeError"></small>
-      <input type="submit" value="Enviar" onclick="validar()">
+      <!--Envío: botón de enviar-->
+      <input type="button" id="enviar" value="Enviar" onclick="validar()">
+      <small id="mensajeEnviado"></small>
     </form>
   </main>
-  <!--Footer: enlace a github-->
+  <!--Footer: enlace a github + cambio de tema-->
   <footer>
     <p>Código fuente en <a href="https://github.com/AlexSilvaFBMOLL/B2_Practica2">Github</a></p>
     <button onclick="cambiarTema()">

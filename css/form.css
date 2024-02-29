@@ -1,30 +1,38 @@
-h1 {
+/* Estilos aplicados a la página que contiene el formulario de contacto */
+h1 { /* Encabezado: color y márgenes */
   color: var(--text-color);
   margin: 10px;
 }
 
-main {
+p {/* Párrafo: color, márgenes y ancho máximo */
+  color: var(--text-color-secondary);
+  max-width: 1000px;
+  margin: 10px;
+  margin-bottom: 25px;
+}
+
+main {/* Main: contenedor donde está el formulario */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-main form {
+main form {/* Formulario HTML */
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   color: var(--text-color-secondary);
   width: 100%;
-  max-width: 500px;
+  max-width: 800px;
   margin-bottom: 50px;
 }
 
-main form * {
+main form * {/* Todos los elementos del formulario */
   flex-basis: 100%;
   margin: 2px 10px;
 }
 
-main form input, main form textarea {
+main form input, main form textarea {/* Inputs y textareas del formulario */
   font-size: 1rem;
   color: var(--text-color);
   background-color: var(--nav-background);
@@ -33,7 +41,7 @@ main form input, main form textarea {
   padding: 3px 5px;
 }
 
-main form input[type=submit] {
+main form input[type=button] {/* Botón de enviar */
   align-self: flex-end;
   cursor: pointer;
   border-radius: 10px;
@@ -42,14 +50,25 @@ main form input[type=submit] {
   padding: 10px;
 }
 
-.invalid {
-  background-color: #F68E8470;
+main form *:disabled {/* Cuando se envíe el formulario se deshabilitan los campos. Se cambiará el cursor. */
+  cursor: not-allowed;
 }
 
-small {
+.invalid {/* Clase que se da a los input cuando ha fallado la validación */
+  border: 1px solid #F68E8470;
+}
+
+small {/* Small: usado para mostrar los errores de validación */
   color: #F68E84;
 }
 
-textarea {
+small#mensajeEnviado {/* Este small tiene color diferente, pues es para notificar de que se ha enviado el formulario correctamente */
+  color: #79db76;
+  align-self: flex-end;
+  margin-top: 10px;
+}
+
+textarea {/* Para que el text area no pueda cambiarse de tamaño manualmente y que no haya una scrollbar: en JS se ha hecho que se cambie de tamaño automáticamente */
   resize: none;
+  overflow: hidden;
 }
