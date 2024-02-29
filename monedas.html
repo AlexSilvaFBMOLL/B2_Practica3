@@ -29,9 +29,13 @@
     <article id="circulante">
       <section class="titulos-estrellas">
         <h1>Austria</h1>  
+        <!--Div con clase stars, al tener el ratón en este área se muestra el Div valorar-->
         <div class="stars" onmouseover="showValorar(this)" onmouseout="hideValorar(this)">
+          <!--Contenedor de un input numérico y un botón-->
           <div class="valorar">
+            <!--Input: tipo texto, en móvil se pone el teclado numérico, acepta únicamente números y teclas de eliminar o de movimiento-->
             <input type="text" inputmode="numeric" onkeydown="return /[0-9]|Arrow|Backspace|Delete/.test(event.key)">
+            <!--Botón: al hacer click se ejecuta la función valorar-->
             <button onclick="valorar(this)">Valorar</button>
           </div>
         </div>
