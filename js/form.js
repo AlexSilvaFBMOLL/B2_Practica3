@@ -12,7 +12,7 @@ function validar() {
   let mensajeEnviado = document.getElementById("mensajeEnviado")
   let flag = true
   // Comprobación nombre: Caracteres alfabéticos separados por 0 o 1 espacio
-  if (!/^([a-zA-ZÀ-ÖØ-öø-ÿªº-]\s{0,1})+$/.test(nombre.value)) {
+  if (!/^([a-zA-ZÀ-ÖØ-öø-ÿªº\-]\s{0,1})+$/.test(nombre.value)) {
     nombre.className = "invalid"
     flag = false
     if(/  /.test(nombre.value)) { // Si se han usado dos espacios juntos se pone un mensaje
@@ -25,7 +25,7 @@ function validar() {
     nombreError.innerHTML = ""
   }
   // Comprobación email: forma típica de un email
-  if (!/^[\.\w-]+@([\w-]+\.)+[\w-]{2,4}$/.test(email.value)) {
+  if (!/^[\.\w\-]+@([\w\-]+\.)+[\w\-]{2,4}$/.test(email.value)) {
     email.className = "invalid"
     flag = false
     emailError.innerHTML = "El formato del correo electrónico no es correcto."
@@ -34,7 +34,7 @@ function validar() {
     emailError.innerHTML = ""
   }
   // Comprobación mensaje: Caracteres alfanuméricos, puntos y guiones. Separados por 0 o 1 espacio
-  if (!/^([\wÀ-ÖØ-öø-ÿªº\.\,-!?¡¿]\s{0,1})+$/.test(mensaje.value)) {
+  if (!/^([\wÀ-ÖØ-öø-ÿªº\.\,!?¡¿\n@\-\+]\s{0,1})+$/.test(mensaje.value)) {
     mensaje.className = "invalid"
     flag = false
     if(/  /.test(mensaje.value)) { // Si se han usado dos espacios juntos se pone un mensaje
