@@ -188,7 +188,7 @@ Las fotografías que he tomado ocupaban 10MB porque tenían una resolución de 8
     <td><img src="media/img/readme/mainpagedark.png">
   <tr align="center">
     <td><img src="media/img/readme/mainpagephone.png">
-    <td><img align="center" src="media/img/readme/mainpagephonedark.png">
+    <td><img src="media/img/readme/mainpagephonedark.png">
   <tr>
     <th colspan=2 align="center">Valoraciones
   <tr>
