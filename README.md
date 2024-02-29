@@ -184,13 +184,13 @@ Las fotografías que he tomado ocupaban 10MB porque tenían una resolución de 8
   <tr>
     <th colspan=2 align="center">Web responsiva
   <tr>
-    <td align="center"><img src="media/img/readme/mainpage.png">
-    <td align="center"><img src="media/img/readme/mainpagedark.png">
+    <td><img src="media/img/readme/mainpage.png">
+    <td><img src="media/img/readme/mainpagedark.png">
   <tr>
-    <td align="center"><img src="media/img/readme/mainpagephone.png">
-    <td align="center"><img src="media/img/readme/mainpagephonedark.png">
+    <td><img align="center" src="media/img/readme/mainpagephone.png">
+    <td><img align="center" src="media/img/readme/mainpagephonedark.png">
   <tr>
     <th colspan=2 align="center">Valoraciones
   <tr>
-    <td align="center"><img src="media/img/readme/valorations.png">
-    <td align="center"><img src="media/img/readme/valorationsdark.png">
+    <td><img src="media/img/readme/valorations.png">
+    <td><img src="media/img/readme/valorationsdark.png">
