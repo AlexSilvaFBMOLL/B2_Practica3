@@ -29,42 +29,43 @@ article {/* Artículos con texto e imágenes */
 article > * { /* Todos los elementos dentro de los artículos */
   margin: 0px 20px;
 }
-article section.imagenes { /* Elemento contenedor de las imágenes */
+article section.imagenes { /* Elemento contenedor de las imágenes de monedas */
   display: flex;
   gap: 10px;
   margin: 20px;
   justify-content: center;
 }
-article section.titulos-estrellas {
+article section.titulos-estrellas { /* Elemento contenedor de el h1 y las estrellas de las monedas */
   display: flex;
   align-items: center;
   justify-content:space-between
 }
-article section.titulos-estrellas div.stars {
+article section.titulos-estrellas div.stars { /* Contenedor de los svg con las estrellas */
   position: relative;
   display: flex;
   padding: 1px;
 }
-article section.titulos-estrellas div.stars img {
+article section.titulos-estrellas div.stars img { /* SVG de las monedas */
   max-width: 1.5rem;
   max-height: 1.5rem;
   cursor: pointer;
 }
-.valorar {
+.valorar { /* Clase valorar, aplicada a un div con un input y un botón */
   display: none;
   position: absolute;
   width: 100%;
   top: 25px;
   text-align: center;
 }
-.valorar input {
+.valorar input { /* Input numérico */
   border: 1px solid var(--text-color);
   background-color: var(--nav-background);
   color: var(--text-color);
   width: 100%;
 }
-.valorar button {
+.valorar button { /* Botón de enviar valoración */
   border: none;
+  margin-top: 2px;
   padding: 3px;
   border-radius: 10%;
   background-color: var(--text-color);
