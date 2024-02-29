@@ -33,14 +33,15 @@ function validar() {
     email.className = ""
     emailError.innerHTML = ""
   }
-  // Comprobación mensaje: Caracteres alfanuméricos, puntos y guiones. Separados por 0 o 1 espacio
-  if (!/^([\wÀ-ÖØ-öø-ÿªº\.\,!?¡¿\n@\-\+]\s{0,1})+$/.test(mensaje.value)) {
+  // Comprobación mensaje: Caracteres alfanuméricos y algunos utilizados normalmente, limitando cuáles se pueden usar.
+  // Al no hacer nada con el contenido del formulario, se podría omitir esta comprobación.
+  if (!/^([\wÀ-ÖØ-öø-ÿªº\.\,!?¡¿\n@\-\+:;]\s{0,1})+$/.test(mensaje.value)) {
     mensaje.className = "invalid"
     flag = false
     if(/  /.test(mensaje.value)) { // Si se han usado dos espacios juntos se pone un mensaje
-      mensajeError.innerHTML = "Solo puedes usar caracteres alfabéticos con un espacio entre palabras."
+      mensajeError.innerHTML = "Solo puedes usar un espacio entre palabras."
     } else { // Sino se pone otro
-      mensajeError.innerHTML = "El contenido del mensaje no es válido. Solo puedes usar caracteres alfabéticos."
+      mensajeError.innerHTML = "Hay caracteres no válidos en el mensaje."
     }
   } else { // Si cumple con la validación se elimina la clase de error, si hay, y se oculta el texto de error
     mensaje.className = ""
