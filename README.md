@@ -177,8 +177,16 @@ Las fotografías que he tomado ocupaban 10MB porque tenían una resolución de 8
   + Hay iconos de estrellas vacías y medio vacías para modo claro y para modo oscuro
 
 ## Galería
-### Página de inicio
 Light mode                                      |  Dark mode
 :----------------------------------------------:|:---------------------------------------------------:
 ![alt text](media/img/readme/mainpage.png)      | ![alt text](media/img/readme/mainpagedark.png)
 ![alt text](media/img/readme/mainpagephone.png) | ![alt text](media/img/readme/mainpagephonedark.png)
+
+<table>
+  <tr>
+    <th colspan=2 align="center">Test</th>
+  <tr>
+    <td>test2</td>
+    <td>test3
+</table>
+![alt text](media/img/readme/valorations.png) | ![alt text](media/img/readme/valorationsdark.png)
