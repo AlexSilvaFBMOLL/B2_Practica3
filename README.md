@@ -153,9 +153,17 @@ Las fotografías que he tomado ocupaban 10MB porque tenían una resolución de 8
 + Cambios menores
 + Finalizado el proyecto de la práctica 2
 
-## Agregación JavaScript
+## Interactividad JavaScript
 ### 15 de febrero de 2024
 + Implementación de JavaScript en el proyecto
 + Cambios en la compatibilidad de modo claro y oscuro
   + Antes sólo se podía cambiar si el navegador estaba en un modo u otro. Ahora al cargar la página por primera vez se guarda en localStorage el modo preferido por el usuario y, además, se pondrá un botón en el pie de página para poder cambiar este modo. Al pulsarlo se guardará el nuevo valor en la variable local y cuando se recargue la página se mantendrá el modo de la última sesión.
   + Para que esta función sea aplicable en todas las páginas hay que abrir la web desde un dominio, con la extensión de Live Server se puede lograr el mismo efecto. Si no se hace, el cambio de tema sólo tendrá efecto en la página en la que se haya pulsado el botón.
+### 21 de febrero de 2024
++ Agregado formulario de contacto
+  + Se ha introducido en la barra de navegación un nuevo botón que conduce a un formulario desde el cuál un usuario puede introducir su nombre, correo electrónico y un mensaje que mandar.
+### 29 de febrero de 2024
++ Actualizado formulario de contacto
+  + El formulario introducido mediante HTML ahora cuenta con validación JavaScript.
+  + Estilos CSS
+  + Mensajes de validación que informan al usuario de qué errores pueden tener los campos.

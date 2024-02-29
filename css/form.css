@@ -7,6 +7,7 @@ h1 { /* Encabezado: color y márgenes */
 p {/* Párrafo: color, márgenes y ancho máximo */
   color: var(--text-color-secondary);
   max-width: 1000px;
+  text-align: justify;
   margin: 10px;
   margin-bottom: 25px;
 }
@@ -23,7 +24,7 @@ main form {/* Formulario HTML */
   flex-wrap: nowrap;
   color: var(--text-color-secondary);
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   margin-bottom: 50px;
 }
 
@@ -62,7 +63,7 @@ small {/* Small: usado para mostrar los errores de validación */
   color: #F68E84;
 }
 
-small#mensajeEnviado {/* Este small tiene color diferente, pues es para notificar de que se ha enviado el formulario correctamente */
+span#mensajeEnviado {/* Span que informa de que se ha enviado el formulario correctamente */
   color: #79db76;
   align-self: flex-end;
   margin-top: 10px;

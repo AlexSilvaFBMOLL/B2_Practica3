@@ -9,7 +9,8 @@
   <link rel="icon" href="media/svg/CWLogo.svg">
   <script src="./js/tema.js"></script>
 </head>
-<body>
+<!--Cambiar el tamaño del textarea al cambiar el tamaño de la ventana-->
+<body onresize="resize()">
   <header>
     <!--Header común en todas las pestañas-->
     <a href="index.html"><img src="media/svg/CWLetters.svg" alt="Logotipo de CoinWorld" id="Logo"/></a>
@@ -44,7 +45,7 @@
       <small id="mensajeError"></small>
       <!--Envío: botón de enviar-->
       <input type="button" id="enviar" value="Enviar" onclick="validar()">
-      <small id="mensajeEnviado"></small>
+      <span id="mensajeEnviado"></span>
     </form>
   </main>
   <!--Footer: enlace a github + cambio de tema-->
