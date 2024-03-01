@@ -65,13 +65,20 @@ proyecto
 │   │   │   |   US_5-R.jpg (Billete de 5 dólares Reverso)
 │   │   │   |   US_5.jpg (Billete de 5 dólares)
 |   │   └───exonumia
+│   │   │   |   medalla-full.png (Medalla española: tamaño completo)
 │   │   │   |   medalla-R-full.png (Medalla española Reverso: tamaño completo)
 │   │   │   |   medalla-R.png (Medalla española Reverso)
 │   │   │   |   medalla.png (Medalla española)
+│   │   │   |   recuerdo-full.png (Moneda elongada: tamaño completo)
+│   │   │   |   recuerdo-R-full.png (Moneda elongada Reverso: tamaño completo)
 │   │   │   |   recuerdo-R.png (Moneda elongada de recuerdo Reverso)
 │   │   │   |   recuerdo.png (Moneda elongada de recuerdo)
+│   │   │   |   replica-full.png (Réplica francesa: tamaño completo)
+│   │   │   |   replica-R-full.png (Réplica francesa Reverso: tamaño completo)
 │   │   │   |   replica-R.png (Réplica francesa de una moneda Reverso)
 │   │   │   |   replica.png (Réplica francesa de una moneda)
+│   │   │   |   token-full.png (Ficha: tamaño completo)
+│   │   │   |   token-R-full.png (Ficha Reverso: tamaño completo)
 │   │   │   |   token-R.png (Ficha de feria Reverso)
 │   │   │   |   token.png (Ficha de feria)
 |   │   └───fondo
@@ -81,10 +88,16 @@ proyecto
 │   │   │   |   exonumia.jpg
 |   │   └───monedas
 │   │   │   |   AT_KM3141.png (Austria KM# 3141)
+│   │   │   |   AT_KM3141-full.png (Austria KM# 3141: tamaño completo)
 │   │   │   |   AT_KM3275.png (Austria KM# 3275)
+│   │   │   |   AT_KM3275-full.png (Austria KM# 3275: tamaño completo)
+│   │   │   |   ES_UC350-full.png (España UC# 350: tamaño completo)
+│   │   │   |   ES_UC350-R-full.png (Reverso de España UC# 350: tamaño completo)
 │   │   │   |   ES_UC350-R.png (Reverso de España UC# 350)
 │   │   │   |   ES_UC350.png (España UC# 350)
+│   │   │   |   EUR_0,50-full.png (50 cents euro: tamaño completo)
 │   │   │   |   EUR_0,50.png (Cara común de 50 céntimos de euro)
+│   │   │   |   EUR_2.png (2 euros: tamaño completo)
 │   │   │   |   EUR_2.png (Cara común de moneda de 2 euros)
 |   │   └───otras
 │   │   │   |   numista.png (Logo de Numista)
@@ -97,6 +110,8 @@ proyecto
 │   │   │   |   mainpagephonedark.png (Pantalla principal en móvil y modo oscuro)
 │   │   │   |   valorations.png (Sistema de valoraciones por estrellas)
 │   │   │   |   valorationsdark.png (Sistema de valoraciones en modo oscuro)
+│   │   │   |   visor.png (Sistema de visualización de imágenes)
+│   │   │   |   visordark.png (Visualización de imágenes en modo oscuro)
 │   │
 │   └───svg
 │   │   │   CWLetters.svg (Logo)
@@ -200,6 +215,8 @@ Las fotografías que he tomado ocupaban 10MB porque tenían una resolución de 8
 + Visor de imágenes a tamaño completo
   + Se ha agregado una función que permite hacer click sobre las imágenes de monedas, billetes y exonumia en sus respectivas páginas. Esto abrirá un modal en la propia pestaña. En este modal hará que la ventana se oscurezca y que aparezca sobre ella la imagen a alta resolución o, en su defecto, la imagen que se ha pulsado.
   + Se ha limitado el tamaño de la imagen para que se muestre ocupando el 90% del viewport, no obstante, si se hace zoom se podrá comprobar que efectivamente la imagen tiene mayor calidad.
++ Añadir imágenes a mejor calidad
+  + Se ha añadido una versión a mayor resolución de la mayoría de las piezas, para poderlas ver mejor en el visor.
 
 ## Galería
 <table>
@@ -219,3 +236,8 @@ Las fotografías que he tomado ocupaban 10MB porque tenían una resolución de 8
   <tr>
     <td><img src="media/img/readme/valorations.png">
     <td><img src="media/img/readme/valorationsdark.png">
+  <tr>
+    <th colspan=2 align="center">Visor de imágenes
+  <tr>
+    <td><img src="media/img/readme/visor.png">
+    <td><img src="media/img/readme/visordark.png">
