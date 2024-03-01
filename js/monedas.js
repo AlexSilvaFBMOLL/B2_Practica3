@@ -13,11 +13,12 @@ function hideValorar(elemento) {
 // La función que genera las estrellas de valoración de cada elemento numismático
 // Tiene como parámetros un elemento, el botón de valorar, y un valor, la puntuación que queremos asignar
 function valorar(elemento, valor) {
+  if(valor == null) {valor = 0} // Si es null, se asignará el valor 0. !NECESARIO -- en algunos navegadores móviles da error sin esta línea
   let valorFlag = valor // Una copia del valor, para asignar las estrellas
   let noFlag = 10 - valor // Para asignar las estrellas vacías
   let div = elemento.parentElement.parentElement // El padre del padre del botón, es decir, el div que contiene las estrellas
   let article = elemento.parentElement.parentElement.parentElement.parentElement // El padre del padre del padre del padre del botón, es decir, el artículo que contiene el ID de la moneda a valorar
-  if (valor >= 0 && valor <= 10) { // Si el valor está entre 0 y 10 se ejecuta la función. Si es null, el código lo considera igual a 0
+  if (valor >= 0 && valor <= 10) { // Si el valor está entre 0 y 10 se ejecuta la función
     div.innerHTML = ""
     if (valor % 2 != 0) { // Si el valor es impar, se genera una media estrella
       while (valorFlag > 1) { // Al ser impar, el valor más bajo será 1
@@ -51,9 +52,15 @@ function valorar(elemento, valor) {
 
 // Esta función es la que se llamará cuando el usuario desee valorar. Muestra un mensaje de confirmación antes de activar la petición a la función de valorar.
 function confirmarValoracion(elemento) {
-  let valor = elemento.previousElementSibling.value
-  if (confirm(`¿Desea enviar esta valoración de ${valor} estrellas?`)) {
-    valorar(elemento, valor)
+  let input = elemento.previousElementSibling // Recoge el valor del input
+  let valor = input.value
+  if(valor == "") {valor = 0} // Si el input está vacío, asigna valor 0
+  if (valor >= 0 && valor <= 10) { // Se comprueba que el valor esté entre 0 y 10 para no tener que mostrar el confirm cuando se introduzca un valor fuera de rango
+    if (confirm(`¿Desea enviar esta valoración de ${valor} estrellas?`)) { // El usuario confirma la valoración
+      valorar(elemento, valor) // Se valora
+    }
+  } else { // Sino está el valor entre 0 y 10, se pone de color rojo el input
+    input.style.backgroundColor = "#F68E84"
   }
 }
 

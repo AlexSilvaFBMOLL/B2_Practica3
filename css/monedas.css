@@ -46,6 +46,7 @@ article section.titulos-estrellas div.stars { /* Contenedor de los svg con las e
   padding: 1px;
 }
 article section.titulos-estrellas div.stars img { /* SVG de las monedas */
+  width: 1.5rem;
   max-width: 1.5rem;
   max-height: 1.5rem;
   cursor: pointer;
@@ -72,7 +73,10 @@ article section.titulos-estrellas div.stars img { /* SVG de las monedas */
   color: var(--body-background);
   cursor: pointer;
 }
-article img { /* Imágenes */
+.valorar button:hover {
+  opacity: 0.8;
+}
+.imagenes > img { /* Imágenes */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,6 +85,37 @@ article img { /* Imágenes */
   max-width: 45vw;
   max-height: 45vw;
   object-fit: scale-down; /* Esto mantendrá las proporciones de la imagen aunque le hayamos indicado width y height */
+}
+.visor {
+  display: none;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+.imagen-visor {
+  display: block;
+  align-self: center;
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: scale-down;
+}
+.cerrar {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: var(--text-color);
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.cerrar:hover {
+  opacity: 0.8;
 }
 article p { /* Párrafos */
   margin-top: 10px;
