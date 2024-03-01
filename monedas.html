@@ -40,14 +40,38 @@
           </div>
         </div>
       </section>
+      <!--Otros títulos-->
       <h3>50 céntimos 2009</h3>
+      <!--Sección con imágenes-->
       <section class="imagenes">
         <img src="media/img/monedas/EUR_0,50.png" onclick="visionar(this)" alt="Imagen de la cara común de una moneda de cincuenta céntimos">
         <img src="media/img/monedas/AT_KM3141.png" onclick="visionar(this)" alt="Imagen del anverso de una moneda de cincuenta céntimos originaria de Austria, concretamente del año 2009">
       </section>
+      <!--El texto del artículo-->
       <p>La mayoría de las monedas que encontraremos en nuestras vidas serán monedas como esta. Monedas que han estado en circulación, es decir, con las que compramos y pagamos.</p>
       <p>El hecho de haber estado moviéndose de mano en mano hace que la moneda sea menos valiosa, porque ha recibido golpes, arañazos, manchas e incluso su pátina (una capa protectora natural) ha podido verse dañada.</p>
       <p>Esto no impide que puedan ser consideradas piezas de colección. Para algunos es una tarea entretenida revisar el cambio que tienen en la cartera para ver si encuentran alguna moneda que no tuvieran.</p>
+      <!--Sección de comentarios-->
+      <section class="comentarios-caja">
+        <!--Botón para mostrar y ocultar los comentarios-->
+        <button onclick="comments(this)">Comentarios</button>
+        <!--Formulario para añadir comentario-->
+        <form action="#" id="circulante-comentar" class="comentar-form" onsubmit="return false">
+          <!--Input de nombre de usuario y un small para el control de errores-->
+          <input type="text" maxlength="25" placeholder="Nombre de usuario">
+          <small class="error"></small>
+          <!--Textarea para el comentario en sí que al introducir texto cambia de tamaño según cuántas líneas se escriban-->
+          <textarea rows="1" maxlength="150" oninput="resize(this)" placeholder="Agrega un comentario"></textarea>
+          <small class="error"></small>
+          <!--Botón para validar y enviar el comentario-->
+          <input type="button" value="Comenta" onclick="comentar(this.parentElement.id)">
+        </form>
+        <!--Todos los comentarios se ponen debajo del formulario, uno detrás de otro-->
+        <div class="comentario">
+          <h4>Diego</h4>
+          <span>Tengo esta moneda en la cartera!</span>
+        </div>
+      </section>
     </article>
     <!--Monedas conmemorativas-->
     <article id="conmemorativa">
@@ -68,6 +92,24 @@
       </section>
       <p>Las monedas conmemorativas son monedas que comparten la cara común con las monedas circulantes. Algunas de estas monedas incluso llegan a ponerse en circulación, como la que aparece en la imagen, ya que la gente no se da cuenta de que lo que tiene en sus manos puede valer más que una moneda normal.</p>
       <p>En Europa son monedas de dos euros las que acuñan con motivos conmemorativos. Cada país tiene la oportunidad de emitir un máximo de dos monedas conmemorativas anuales. Son acuñaciones limitadas.</p>
+      <section class="comentarios-caja">
+        <button onclick="comments(this)">Comentarios</button>
+        <form action="#" id="conmemorativa-comentar" class="comentar-form" onsubmit="return false">
+          <input type="text" maxlength="25" placeholder="Nombre de usuario">
+          <small class="error"></small>
+          <textarea rows="1" maxlength="150" oninput="resize(this)" placeholder="Agrega un comentario"></textarea>
+          <small class="error"></small>
+          <input type="button" value="Comenta" onclick="comentar(this.parentElement.id)">
+        </form>
+        <div class="comentario">
+          <h4>Pepe</h4>
+          <span>No sabía que las monedas de dos euros pudieran tener este aspecto :o</span>
+        </div>
+        <div class="comentario">
+          <h4>Kike</h4>
+          <span>¿Cómo se supone que voy a conseguirla?</span>
+        </div>
+      </section>
     </article>
     <!--Monedas de colección-->
     <article id="coleccion">
@@ -88,6 +130,16 @@
       </section>
       <p>Las monedas de colección son las más valiosas. Su valor facial no suele ser el de una moneda que circula: 1.5 euros, 12 euros, 30 euros, 40 euros... la mayoría de la gente jamás habrá visto una moneda con esos valores.</p>
       <p>Su material también es más valioso, ya que estas monedas se acuñan en oro o plata, lo cuál aumenta aún más su valor. Las monedas de oro son fáciles de conservar, es un metal que difícilmente sufre oxidación. La plata es también duradera, pero la grasa de las manos puede oxidar una pieza.</p>
+      <section class="comentarios-caja">
+        <button onclick="comments(this)">Comentarios</button>
+        <form action="#" id="coleccion-comentar" class="comentar-form" onsubmit="return false">
+          <input type="text" maxlength="25" placeholder="Nombre de usuario">
+          <small class="error"></small>
+          <textarea rows="1" maxlength="150" oninput="resize(this)" placeholder="Agrega un comentario"></textarea>
+          <small class="error"></small>
+          <input type="button" value="Comenta" onclick="comentar(this.parentElement.id)">
+        </form>
+      </section>
     </article>
   </main>
   <!--Footer común en todas las pestañas-->
@@ -101,5 +153,6 @@
   <!--Script de las monedas-->
   <script src="js/valorar.js"></script>
   <script src="js/visor.js"></script>
+  <script src="js/comments.js"></script>
 </body>
 </html>

@@ -13,7 +13,7 @@ function validar() {
   let flag = true
   // Comprobación nombre: Caracteres alfabéticos separados por 0 o 1 espacio
   if (!/^([a-zA-ZÀ-ÖØ-öø-ÿªº\-]\s{0,1})+$/.test(nombre.value)) {
-    nombre.className = "invalid"
+    nombre.classList.add("invalid")
     flag = false
     if(nombre.value == '' || nombre.value == null) { // Si se ha dejado en blanco
       nombreError.innerHTML = "No puedes dejar este campo en blanco."
@@ -23,12 +23,12 @@ function validar() {
       nombreError.innerHTML = "Solo puedes usar caracteres alfabéticos."
     }
   } else { // Si cumple con la validación se elimina la clase de error, si hay, y se oculta el texto de error
-    nombre.className = ""
+    nombre.classList.remove("invalid")
     nombreError.innerHTML = ""
   }
   // Comprobación email: forma típica de un email
   if (!/^[\.\w\-]+@([\w\-]+\.)+[\w\-]{2,4}$/.test(email.value)) {
-    email.className = "invalid"
+    email.classList.add("invalid")
     flag = false
     if(email.value == '' || email.value == null) { // Si se ha dejado en blanco
       emailError.innerHTML = "No puedes dejar este campo en blanco."
@@ -36,13 +36,13 @@ function validar() {
       emailError.innerHTML = "El formato del correo electrónico no es correcto."
     }
   } else { // Si cumple con la validación se elimina la clase de error, si hay, y se oculta el texto de error
-    email.className = ""
+    email.classList.remove("invalid")
     emailError.innerHTML = ""
   }
   // Comprobación mensaje: Caracteres alfanuméricos y algunos utilizados normalmente, limitando cuáles se pueden usar.
   // Al no hacer nada con el contenido del formulario, se podría omitir esta comprobación.
   if (!/^([\wÀ-ÖØ-öø-ÿªº\.\,!?¡¿\n@\-\+:;]\s{0,1})+$/.test(mensaje.value)) {
-    mensaje.className = "invalid"
+    mensaje.classList.add("invalid")
     flag = false
     if(mensaje.value == '' || mensaje.value == null) { // Si se ha dejado en blanco
       mensajeError.innerHTML = "No puedes dejar este campo en blanco."
@@ -52,7 +52,7 @@ function validar() {
       mensajeError.innerHTML = "Hay caracteres no válidos en el mensaje."
     }
   } else { // Si cumple con la validación se elimina la clase de error, si hay, y se oculta el texto de error
-    mensaje.className = ""
+    mensaje.classList.remove("invalid")
     mensajeError.innerHTML = ""
   }
 

@@ -47,6 +47,16 @@
       </section>
       <p>Las que pueden ser las más valiosas piezas de exonumia son las medallas, puesto que en ocasiones se acuñan en metales como plata u oro, aunque esta en concreto es de acero inoxidable bañado en latón, es decir, nada valioso.</p>
       <p>Las medallas en ocasiones se pueden confundir con monedas de colección, ya que sus acuñaciones tienen motivos similares: conmemorar eventos. Se pueden diferenciar porque las medallas no tienen en ninguna cara un valor monetario, aunque la Fábrica Nacional de Moneda y Timbre haya emitido medallas en ocasiones.</p>
+      <section class="comentarios-caja">
+        <button onclick="comments(this)">Comentarios</button>
+        <form action="#" id="medalla-comentar" class="comentar-form" onsubmit="return false">
+          <input type="text" maxlength="25" placeholder="Nombre de usuario">
+          <small class="error"></small>
+          <textarea rows="1" maxlength="150" oninput="resize(this)" placeholder="Agrega un comentario"></textarea>
+          <small class="error"></small>
+          <input type="button" value="Comenta" onclick="comentar(this.parentElement.id)">
+        </form>
+      </section>
     </article>
     <!--Monedas elongadas-->
     <article id="recuerdo">
@@ -65,6 +75,16 @@
         <img src="media/img/exonumia/recuerdo-R.png" onclick="visionar(this)" alt="Imagen del reverso liso de una moneda elongada">
       </section>
       <p>La que considero que es la mejor forma de iniciarse en este mundo es coleccionando recuerdos de los lugares que se visita. En algunos de ellos podemos encontrar máquinas que prensan monedas de 5 céntimos de forma que quedan estas monedas elongadas con motivos del lugar. Yo siempre que veo una máquina de estas, o similares, intento conseguir un ejemplar.</p>
+      <section class="comentarios-caja">
+        <button onclick="comments(this)">Comentarios</button>
+        <form action="#" id="recuerdo-comentar" class="comentar-form" onsubmit="return false">
+          <input type="text" maxlength="25" placeholder="Nombre de usuario">
+          <small class="error"></small>
+          <textarea rows="1" maxlength="150" oninput="resize(this)" placeholder="Agrega un comentario"></textarea>
+          <small class="error"></small>
+          <input type="button" value="Comenta" onclick="comentar(this.parentElement.id)">
+        </form>
+      </section>
     </article>
     <!--Réplicas de monedas-->
     <article id="replica">
@@ -85,6 +105,16 @@
       <p>Hay que nombrar las monedas que son réplicas de otras. Existen ejemplares como el de la imagen, un fascículo de una empresa francesa, que no intenta hacerse pasar por una auténtica, pues en el reverso se ve claramente que no lo es. Sin embargo, hay otra clase de réplicas denominadas "Réplicas de época".</p>
       <p>Las réplicas de época son monedas que se acuñan en la misma época en la que se acuñaron las monedas por las que quieren hacerlas pasar. Los ejemplos más comunes en España son las pesetas de plata de Alfonso XII o las de plata de Franco. En aquellas épocas se acuñaron montones de estas monedas en metales menos valiosos, con tal de hacerlas pasar por auténticas.</p>
       <p>Para identificar una réplica lo mejor es pesarla. Si según su volumen y composición debería pesar X gramos, dato que podemos conocer con revisar algún catálogo, no puede pesar menos que eso y, si lo hace, lo más probable es que sea una réplica.</p>
+      <section class="comentarios-caja">
+        <button onclick="comments(this)">Comentarios</button>
+        <form action="#" id="replica-comentar" class="comentar-form" onsubmit="return false">
+          <input type="text" maxlength="25" placeholder="Nombre de usuario">
+          <small class="error"></small>
+          <textarea rows="1" maxlength="150" oninput="resize(this)" placeholder="Agrega un comentario"></textarea>
+          <small class="error"></small>
+          <input type="button" value="Comenta" onclick="comentar(this.parentElement.id)">
+        </form>
+      </section>
     </article>
     <!--Tokens / Fichas-->
     <article id="token">
@@ -103,6 +133,16 @@
         <img src="media/img/exonumia/token-R.png" onclick="visionar(this)" alt="Imagen del reverso del token de feria">
       </section>
       <p>Quizá las menos valiosas de las piezas de exonumia: los tokens. Sobretodo el de la imagen, que vale un punto. En este grupo entran fichas de Póker, de casinos, de ferias... cualquier lugar donde utilicen monedas creadas por ellos para sustituir a la moneda del lugar.</p>
+      <section class="comentarios-caja">
+        <button onclick="comments(this)">Comentarios</button>
+        <form action="#" id="token-comentar" class="comentar-form" onsubmit="return false">
+          <input type="text" maxlength="25" placeholder="Nombre de usuario">
+          <small class="error"></small>
+          <textarea rows="1" maxlength="150" oninput="resize(this)" placeholder="Agrega un comentario"></textarea>
+          <small class="error"></small>
+          <input type="button" value="Comenta" onclick="comentar(this.parentElement.id)">
+        </form>
+      </section>
     </article>
   </main>
   <!--Footer común en todas las pestañas-->
@@ -116,5 +156,6 @@
   <!--Script de las monedas-->
   <script src="js/valorar.js"></script>
   <script src="js/visor.js"></script>
+  <script src="js/comments.js"></script>
 </body>
 </html>

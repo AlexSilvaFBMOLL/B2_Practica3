@@ -2,7 +2,7 @@
 h1, h2, h3 {/* Colores de encabezados */
   color: var(--text-color);
 }
-p, img, label {/* Colores de texto (img para los alt) */
+h4, p, img, label, span {/* Colores de texto (img para los alt) */
   color: var(--text-color-secondary);
 }
 /* Para solventar problemas al poner títulos dentro de sections */
@@ -28,6 +28,9 @@ article {/* Artículos con texto e imágenes */
 }
 article > * { /* Todos los elementos dentro de los artículos */
   margin: 0px 20px;
+}
+article p { /* Párrafos */
+  margin-top: 10px;
 }
 article section.imagenes { /* Elemento contenedor de las imágenes de monedas */
   display: flex;
@@ -73,7 +76,7 @@ article section.titulos-estrellas div.stars img { /* SVG de las monedas */
   color: var(--body-background);
   cursor: pointer;
 }
-.valorar button:hover {
+.valorar button:hover { /* Para que se note que es un elemento pulsable */
   opacity: 0.8;
 }
 .imagenes > img { /* Imágenes */
@@ -87,10 +90,11 @@ article section.titulos-estrellas div.stars img { /* SVG de las monedas */
   cursor: pointer;
   object-fit: scale-down; /* Esto mantendrá las proporciones de la imagen aunque le hayamos indicado width y height */
 }
-.imagenes > img:hover {
+.imagenes > img:hover { /* Para que se note que es un elemento pulsable */
   opacity: 0.8;
 }
-.visor {
+/* VISOR EMERGENTE */
+.visor { /* Ventana emergente del visor de imágenes */
   display: flex;
   justify-content: center;
   position: fixed;
@@ -102,14 +106,14 @@ article section.titulos-estrellas div.stars img { /* SVG de las monedas */
   overflow: auto;
   background-color: rgba(0,0,0,0.8);
 }
-.imagen-visor {
+.imagen-visor { /* Imagen que se mostrará en el visor */
   display: block;
   align-self: center;
   max-width: 90vw;
   max-height: 90vh;
   object-fit: scale-down;
 }
-.cerrar {
+.cerrar { /* Botón de cerrar del visor */
   position: absolute;
   top: 15px;
   right: 35px;
@@ -118,9 +122,80 @@ article section.titulos-estrellas div.stars img { /* SVG de las monedas */
   font-weight: bold;
   cursor: pointer;
 }
-.cerrar:hover {
+.cerrar:hover { /* Para que se note que es un elemento pulsable */
   opacity: 0.8;
 }
-article p { /* Párrafos */
-  margin-top: 10px;
+/* COMENTARIOS */
+.comentarios-caja { /* Elemento contenedor de toda la sección de comentarios */
+  border: 2px solid var(--text-color);
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.comentarios-caja > button { /* Botón para mostrar u ocultar la caja de comentarios */
+  cursor: pointer;
+  margin: 5px;
+  align-self: flex-start;
+  width: fit-content;
+  padding: 2px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--text-color);
+  color: var(--body-background);
+}
+form { /* Todos los formularios de la página: solo hay los de comentar */
+  visibility: collapse;
+  display: flex;
+  flex-direction: column;
+  margin: 0px 5px 3px;
+}
+form > input[type=text], form > textarea { /* Inputs y textareas de dentro del formulario */
+  margin: 2px;
+  padding: 3px;
+  border: 1px solid var(--text-color);
+  background-color: var(--nav-background);
+  color: var(--text-color-secondary);
+  resize: none;
+  overflow: hidden;
+  font-size: 0.9rem;
+}
+form > input.invalid, form > textarea.invalid {/* Clase que se da a los input cuando ha fallado la validación */
+  border: 1px solid #F68E8470;
+}
+form > input[type=text]:focus, form > textarea:focus { /* Cuando se va a escribir en los input */
+  outline: 3px solid var(--text-color);
+}
+form > input.invalid:focus, form > textarea.invalid:focus {/* Clase que se da a los input cuando ha fallado la validación cuando se va a escribir en los input */
+  outline: 3px solid #f68e84;
+}
+small {/* Small: usado para mostrar los errores de validación */
+  margin: 3px;
+  color: #F68E84;
+}
+form > input[type=button] { /* Botones de enviar comentario */
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 2px;
+  padding: 3px;
+  border: none;
+  background-color: var(--text-color);
+  width: fit-content;
+  color: var(--body-background);
+  align-self: flex-end;
+}
+.comentarios-caja button:hover, .comentarios-caja input[type=button]:hover { /* Botones de la caja de comentarios */
+  opacity: 0.8;
+}
+.comentario { /* Un contenedor de un comentario */
+  visibility: collapse;
+  padding: 5px;
+  border-top: 1px solid var(--text-color);
+}
+.comentario:hover { /* Para resaltar el comentario donde se tenga el ratón puesto */
+  background-color: var(--nav-background);
+}
+@media (min-width: 400px) {/* Para reducir el tamaño del input de nombre de dentro del formulario, si la pantalla es más pequeña que esto se cogerá como valor el 100% */
+  form > input[type=text] {
+    max-width: 400px;
+  }
 }

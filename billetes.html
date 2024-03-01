@@ -47,6 +47,16 @@
       </section>
       <p>El dinero en efectivo se va usando cada vez menos, pero los billetes siguen teniendo un valor monetario igual o incluso mayor que el de las monedas. Cuando se va a sacar dinero al cajero automático nos dan billetes nuevos, planchados, recién salidos de la sucursal provincial del Banco de España.</p>
       <p>Este billete en concreto se trata de uno de la primera serie del euro, en el año 2002. Cada país de la comunidad del euro imprimió los suyos. Se puede distinguir en qué país fue imprimido gracias al primer carácter del número de serie.</p>
+      <section class="comentarios-caja">
+        <button onclick="comments(this)">Comentarios</button>
+        <form action="#" id="euro-comentar" class="comentar-form" onsubmit="return false">
+          <input type="text" maxlength="25" placeholder="Nombre de usuario">
+          <small class="error"></small>
+          <textarea rows="1" maxlength="150" oninput="resize(this)" placeholder="Agrega un comentario"></textarea>
+          <small class="error"></small>
+          <input type="button" value="Comenta" onclick="comentar(this.parentElement.id)">
+        </form>
+      </section>
     </article>
     <!--Billetes antiguos-->
     <article id="antiguo">
@@ -66,6 +76,16 @@
       </section>
       <p>Pese a que todos los ejemplares que tengo están en mal estado, este es uno de mis billetes favoritos. No solo es morado, color que me encanta, sino que además en el reverso aparece una parte de la Alhambra en Granada, ciudad de procedencia de parte de mi familia.</p>
       <p>Los billetes tan antiguos como este, de más de 70 años, son difíciles de encontrar en buenas condiciones. Pero en internet se pueden encontrar imágenes de billetes en muy buen estado.</p>
+      <section class="comentarios-caja">
+        <button onclick="comments(this)">Comentarios</button>
+        <form action="#" id="antiguo-comentar" class="comentar-form" onsubmit="return false">
+          <input type="text" maxlength="25" placeholder="Nombre de usuario">
+          <small class="error"></small>
+          <textarea rows="1" maxlength="150" oninput="resize(this)" placeholder="Agrega un comentario"></textarea>
+          <small class="error"></small>
+          <input type="button" value="Comenta" onclick="comentar(this.parentElement.id)">
+        </form>
+      </section>
     </article>
     <!--Billetes extranjeros-->
     <article id="extranjero">
@@ -84,6 +104,16 @@
         <img src="media/img/billetes/US_5-R.jpg" onclick="visionar(this)" alt="Imagen del reverso del billete de 5 dólares, con una representación del Lincoln Memorial">
       </section>
       <p>Los billetes extranjeros pueden ser un gran recuerdo de un viaje, quizá un regalo de alguien que vivió en ese país. Este billete es estadounidense. La historia de cómo llegó a mis manos la he olvidado, pues son muchas piezas las que hay en mi colección, pero ha viajado a través del océano hasta llegar a esta pequeña isla del mediterráneo.</p>
+      <section class="comentarios-caja">
+        <button onclick="comments(this)">Comentarios</button>
+        <form action="#" id="extranjero-comentar" class="comentar-form" onsubmit="return false">
+          <input type="text" maxlength="25" placeholder="Nombre de usuario">
+          <small class="error"></small>
+          <textarea rows="1" maxlength="150" oninput="resize(this)" placeholder="Agrega un comentario"></textarea>
+          <small class="error"></small>
+          <input type="button" value="Comenta" onclick="comentar(this.parentElement.id)">
+        </form>
+      </section>
     </article>
   </main>
   <!--Footer común en todas las pestañas-->
@@ -97,5 +127,6 @@
   <!--Script de las monedas-->
   <script src="js/valorar.js"></script>
   <script src="js/visor.js"></script>
+  <script src="js/comments.js"></script>
 </body>
 </html>
