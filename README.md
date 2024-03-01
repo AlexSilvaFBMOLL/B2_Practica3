@@ -23,6 +23,7 @@ Las carpetas creadas son autodescriptivas, es decir, con leer el nombre de ésta
     + [Fondo](media/img/fondo/ "Imágenes utilizadas para fondos")
     + [Monedas](media/img/monedas "Imágenes de monedas")
     + [Otras](media/img/otras/ "Otras imágenes: logotipos de páginas externas")
+    + [Readme](media/img/readme/ "Imágenes usadas en este documento")
   + [SVG](media/svg "Imágenes vectoriales")
 
 La estructura del proyecto es la siguiente:
@@ -31,18 +32,23 @@ proyecto
 │   README.md (Este documento)
 │   billetes.html (Página dedicada a los billetes)
 │   exonumia.html (Página dedicada a la exonumia)
+│   form.html (Página con un formulario de contacto)
 │   index.html (Página de inicio)
 │   monedas.html (Página dedicada a las monedas)
 │   numismatica.html (Página donde se habla de numismática)
 │
 └───css
+│   │   form.css (Estilos aplicados a la página del formulario)
 │   │   global.css (Estilos aplicados a todas las páginas)
 │   │   index.css (Estilos de la página de inicio)
 │   │   monedas.css (Estilos de la página de monedas)
 │   │   numismatica.css (Estilos de la página de numismática)
 │   
 └───js
+│   │   form.js (Script que controla la validación y envío del formulario)
 │   │   tema.js (Script que controla el tema de la web)
+│   │   valorar.js (Script que controla el sistema de valoración por estrellas)
+│   │   visor.js (Script que controla el visualizador de imágenes a tamaño completo)
 │   
 └───media
 │   │
@@ -59,6 +65,7 @@ proyecto
 │   │   │   |   US_5-R.jpg (Billete de 5 dólares Reverso)
 │   │   │   |   US_5.jpg (Billete de 5 dólares)
 |   │   └───exonumia
+│   │   │   |   medalla-R-full.png (Medalla española Reverso: tamaño completo)
 │   │   │   |   medalla-R.png (Medalla española Reverso)
 │   │   │   |   medalla.png (Medalla española)
 │   │   │   |   recuerdo-R.png (Moneda elongada de recuerdo Reverso)
@@ -83,15 +90,27 @@ proyecto
 │   │   │   |   numista.png (Logo de Numista)
 │   │   │   |   opennumismat.png (Logo de OpenNumismat)
 │   │   │   |   ucoin.png (Logo de Ucoin)
+|   │   └───readme
+│   │   │   |   mainpage.png (Pantalla principal)
+│   │   │   |   mainpagedark.png (Pantalla principal en modo oscuro)
+│   │   │   |   mainpagephone.png (Pantalla principal en móvil)
+│   │   │   |   mainpagephonedark.png (Pantalla principal en móvil y modo oscuro)
+│   │   │   |   valorations.png (Sistema de valoraciones por estrellas)
+│   │   │   |   valorationsdark.png (Sistema de valoraciones en modo oscuro)
 │   │
 │   └───svg
-│   │   │   CWLetters.svg
-│   │   │   CWLettersDark.svg
-│   │   │   CWLogo.svg
-│   │   │   Darkmode.svg
-│   │   │   Lightmode.svg
-│   │   │   Menu.svg
-│   │   │   MenuDark.svg
+│   │   │   CWLetters.svg (Logo)
+│   │   │   CWLettersDark.svg (Logo modo oscuro)
+│   │   │   CWLogo.svg (Favicon logo)
+│   │   │   Darkmode.svg (Botón de modo oscuro)
+│   │   │   HalfStar.svg (Media estrella)
+│   │   │   HalfStarLight.svg (Media estrella modo oscuro)
+│   │   │   Lightmode.svg (Botón de modo claro)
+│   │   │   Menu.svg (Botón de menú)
+│   │   │   MenuDark.svg (Botón de menú modo oscuro)
+│   │   │   NoStar.svg (Estrella vacía)
+│   │   │   NoStarLight.svg (Estrella vacía modo oscuro)
+│   │   │   Star.svg (Estrella completa)
 ```
 ## Tecnologías utilizadas
 ### Visual Studio Code
@@ -175,6 +194,12 @@ Las fotografías que he tomado ocupaban 10MB porque tenían una resolución de 8
   + Cada elemento numismático de la web tiene una valoración que va del 0 al 10. Esta valoración inicialmente está en 0 y el usuario puede valorar como guste. Este valor puede ser cambiado en cualquier momento y además se mantiene cuando se actualiza la página o se cierra el navegador
   + Los iconos de las estrellas han sido creados por mí en SVGator
   + Hay iconos de estrellas vacías y medio vacías para modo claro y para modo oscuro
+### 1 de marzo de 2024
++ Arreglo de errores
+  + El sistema de valoración presentaba errores en algunos navegadores, además de no mostrarse las estrellas en algunas ocasiones. Estos errores han sido solventados.
++ Visor de imágenes a tamaño completo
+  + Se ha agregado una función que permite hacer click sobre las imágenes de monedas, billetes y exonumia en sus respectivas páginas. Esto abrirá un modal en la propia pestaña. En este modal hará que la ventana se oscurezca y que aparezca sobre ella la imagen a alta resolución o, en su defecto, la imagen que se ha pulsado.
+  + Se ha limitado el tamaño de la imagen para que se muestre ocupando el 90% del viewport, no obstante, si se hace zoom se podrá comprobar que efectivamente la imagen tiene mayor calidad.
 
 ## Galería
 <table>
