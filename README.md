@@ -15,6 +15,7 @@ Las carpetas creadas son autodescriptivas, es decir, con leer el nombre de ésta
 `Si pasas el ratón sobre los enlaces obtendrás más información sobre ellos.`
 
 + [CSS](css "Archivos de estilo")
++ [JS](js "Archivos de JavaScript")
 + [Media](media "Contenido multimedia")
   + [Font](media/font "Fuentes de texto")
   + [IMG](media/img "Imágenes") 
@@ -45,6 +46,7 @@ proyecto
 │   │   numismatica.css (Estilos de la página de numismática)
 │   
 └───js
+│   │   comments.js (Script que controla la validación y envío de comentarios)
 │   │   form.js (Script que controla la validación y envío del formulario)
 │   │   tema.js (Script que controla el tema de la web)
 │   │   valorar.js (Script que controla el sistema de valoración por estrellas)
@@ -104,6 +106,10 @@ proyecto
 │   │   │   |   opennumismat.png (Logo de OpenNumismat)
 │   │   │   |   ucoin.png (Logo de Ucoin)
 |   │   └───readme
+│   │   │   |   comments1.png (Comentarios contraidos)
+│   │   │   |   comments2.png (Comentarios expandidos)
+│   │   │   |   commentsdark1.png (Comentarios contraidos en modo oscuro)
+│   │   │   |   commentsdark2.png (Comentarios expandidos en modo oscuro)
 │   │   │   |   mainpage.png (Pantalla principal)
 │   │   │   |   mainpagedark.png (Pantalla principal en modo oscuro)
 │   │   │   |   mainpagephone.png (Pantalla principal en móvil)
@@ -241,3 +247,11 @@ Las fotografías que he tomado ocupaban 10MB porque tenían una resolución de 8
   <tr>
     <td><img src="media/img/readme/visor.png">
     <td><img src="media/img/readme/visordark.png">
+  <tr>
+    <th colspan=2 align="center">Sección de comentarios
+  <tr>
+    <td><img src="media/img/readme/comments1.png">
+    <td><img src="media/img/readme/commentsdark1.png">
+  <tr>
+    <td><img src="media/img/readme/comments2.png">
+    <td><img src="media/img/readme/commentsdark2.png">
